@@ -7,7 +7,7 @@ function BoxWrapper({children}) {
 
 function Dashboardstatsgrid() {
   return (
-    <div className='grid sm:flex gap-4 w-[28rem] sm:w-full'>
+    <div className='grid sm:flex gap-4 w-[24rem] sm:w-full'>
           <BoxWrapper>
               <div className='rounded-full h-12 w-12 flex items-center justify-center bg-sky-500  hover:bg-gray-400'>
                   <IoBagHandle className= 'text-2xl text-white'/>
