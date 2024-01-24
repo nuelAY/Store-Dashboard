@@ -89,7 +89,7 @@ function Products() {
       </div>
       <div className='h-20'></div>
       <strong className="text-gray-700 font-medium">Other Products</strong>
-    <div className="w-full bg-white p-4 rounded-sm border border-gray-200">
+    <div className="sm:w-full bg-white p-4 rounded-sm border border-gray-200 w-[23rem]">
 			
 			<div className=" mt-4 flex flex-col gap-3 ">
 				{popularProducts.map((product) => (
