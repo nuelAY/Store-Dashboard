@@ -51,7 +51,7 @@ const popularProducts = [
 
 function PopularProducts() {
   return (
-    <div className="w-[20rem] bg-white p-4 rounded-sm border border-gray-200">
+    <div className="w-[28rem] sm:w-[20rem] bg-white p-4 rounded-sm border border-gray-200">
 			<strong className="text-gray-700 font-medium">Popular Products</strong>
 			<div className="mt-4 flex flex-col gap-3">
 				{popularProducts.map((product) => (

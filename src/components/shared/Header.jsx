@@ -1,17 +1,41 @@
 import { React, Fragment } from 'react'
-import { HiOutlineBell, HiOutlineChatAlt, HiOutlineSearch } from 'react-icons/hi'
+//import { useState } from 'react';
+import { HiOutlineBell, HiOutlineChatAlt, HiOutlineMenu, HiOutlineSearch } from 'react-icons/hi'
 import { Popover, Transition, Menu} from '@headlessui/react'
 import classNames from 'classnames'
 import { useNavigate } from 'react-router-dom'
+import { useUserContext } from '../context/Menucontext'
+
+{/**const burger = document.querySelector('#burger');
+    const menu = document.querySelector('#menu');
+
+    burger.addEventListener('click', () => {
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+        } else {
+            menu.classList.add('hidden');
+        }
+    })
+const BurgerMenu = () => {
+    const [menuVisible, setMenuVisible] = useState(false);
+}
+
+  const handleBurgerClick = () => {
+    setMenuVisible((prevMenuVisible) => !prevMenuVisible);
+  };**/}
 
 
 function Header() {
     const navigate = useNavigate()
+    const {menuVisible, setMenuVisible} = useUserContext()
   return (
-    <div className='bg-white h-16 px-4 flex justify-between items-center border-b border-gray-200'>
+      <div className='w-[29rem] bg-white h-16 px-6 sm:px-4 flex justify-between sm:justify-between  items-center border-b border-gray-200'>
+          <div className='px-4 cursor-pointer md:hidden' id='burger'onClick={() => setMenuVisible(!menuVisible)}>
+              <HiOutlineMenu fontSize={30} className='text-gray-400'/>
+          </div>
         <div className='relative'>
             <HiOutlineSearch fontSize={20} className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-3'/>
-            <input type="text" placeholder='Search...' className='text-sm focus:outline-none active:outline-none h-10 w-[24rem] border border-gray-300 rounded-sm pl-11 pr-4'/>
+            <input type="text" placeholder='Search...' className='text-sm focus:outline-none active:outline-none h-10 w-[10rem] sm:w-[24rem] border border-gray-300 rounded-sm pl-11 pr-4'/>
         </div>
         <div className='flex items-center gap-2 mr-2'>
             <Popover className="relative">

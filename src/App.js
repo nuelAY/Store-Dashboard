@@ -3,12 +3,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './components/shared/Layout'
 import Dashboard from './components/Dashboard'
 import Products from './components/Products'
+import { MenuProvider } from "./components/context/Menucontext";
 
 
  
 function App() {
   return (
-    <BrowserRouter>
+    <MenuProvider>
+      <BrowserRouter>
       <Routes>
         <Route  path="/" element={ <Layout/>} >
           <Route index element={<Dashboard />} />
@@ -19,6 +21,8 @@ function App() {
       </Routes>
     
     </BrowserRouter>
+    </MenuProvider>
+    
   );
 }
 
