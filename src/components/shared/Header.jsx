@@ -29,7 +29,7 @@ function Header() {
     const navigate = useNavigate()
     const {menuVisible, setMenuVisible} = useUserContext()
   return (
-      <div className='w-[26rem] sm:w-full bg-white h-16 px-6 sm:px-4 flex justify-between sm:justify-between  items-center border-b border-gray-200'>
+      <div className='w-[24rem] sm:w-full bg-white h-16 px-6 sm:px-4 flex justify-between sm:justify-between  items-center border-b border-gray-200'>
           <div className='px-4 cursor-pointer md:hidden' id='burger'onClick={() => setMenuVisible(!menuVisible)}>
               <HiOutlineMenu fontSize={30} className='text-gray-400'/>
           </div>
