@@ -72,7 +72,7 @@ const recentOrderData = [
 
 function RecentOrders() {
   return (
-    <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 w-[20rem] sm:w-full">
+    <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 w-[22rem] sm:w-full">
 			<strong className="text-gray-700 font-medium">Recent Orders</strong>
 			<div className="border-x border-gray-200 rounded-sm mt-3 w-full overflow-y-hidden">
 				<table className="sm:w-full text-gray-700 w-5/6">
